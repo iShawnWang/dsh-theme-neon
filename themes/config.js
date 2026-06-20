@@ -60,46 +60,15 @@ const neonYellowLocales = {
 };
 
 const themeVariants = [
+  // ==================== Dark 系列 (深色主题) ====================
   {
-    id: "neon-yellow",
+    id: "neon-pink-dark",
     enabled: true,
-    zipName: "dark-neon-yellow.zip",
-    displayName: "Dark Neon Yellow",
-    description: "A dark graphite Chrome theme with acid neon yellow accents and starship warning-light energy.",
-    version: "1.0.0",
-    assetDir: "neon-yellow",
-    locales: neonYellowLocales,
-    colors: neonYellowColors
-  },
-  {
-    id: "neon-cyan",
-    enabled: true,
-    zipName: "dark-neon-cyan.zip",
-    displayName: "Dark Neon Cyan",
-    description: "A dark graphite Chrome theme with neon cyan accents and a cold starship console atmosphere.",
-    version: "1.0.0",
-    assetDir: "neon-cyan",
-    colors: {
-      ...neonYellowColors,
-      bookmark_text: [84, 245, 255],
-      tab_text: [84, 245, 255],
-      tab_background_text: [84, 245, 255],
-      ntp_text: [84, 245, 255],
-      omnibox_text: [84, 245, 255],
-      tab_background_text_inactive: [65, 170, 178],
-      ntp_link: [84, 245, 255],
-      toolbar_button_icon: [84, 245, 255],
-      toolbar_text: [84, 245, 255]
-    }
-  },
-  {
-    id: "neon-pink",
-    enabled: true,
-    zipName: "dark-neon-pink.zip",
-    displayName: "Dark Neon Pink",
+    zipName: "neon-pink-dark.zip",
+    displayName: "Neon Pink Dark",
     description: "A dark graphite Chrome theme with vibrant neon pink accents and electric cyberpunk energy.",
     version: "1.0.0",
-    assetDir: "neon-pink",
+    assetDir: "neon-pink-dark",
     colors: {
       ...neonYellowColors,
       bookmark_text: [255, 148, 184],
@@ -114,30 +83,118 @@ const themeVariants = [
     }
   },
   {
-    id: "light-white",
-    enabled: false,
-    zipName: "light-white.zip",
-    displayName: "Light White",
-    description: "A clean white theme with dark text for a minimalist look.",
+    id: "neon-cyan-dark",
+    enabled: true,
+    zipName: "neon-cyan-dark.zip",
+    displayName: "Neon Cyan Dark",
+    description: "A dark graphite Chrome theme with neon cyan accents and a cold starship console atmosphere.",
     version: "1.0.0",
-    assetDir: "light-white",
+    assetDir: "neon-cyan-dark",
     colors: {
-      toolbar: [255, 255, 255],
-      frame: [240, 240, 240],
-      ntp_background: [255, 255, 255],
-      bookmark_text: [32, 36, 42],
-      tab_text: [32, 36, 42],
-      tab_background_text: [32, 36, 42],
-      ntp_text: [32, 36, 42],
-      frame_inactive: [240, 240, 240],
-      background_tab: [245, 245, 245],
-      background_tab_inactive: [245, 245, 245],
-      omnibox_background: [250, 250, 250],
-      omnibox_text: [32, 36, 42],
-      tab_background_text_inactive: [128, 128, 128],
-      ntp_link: [32, 36, 42],
-      toolbar_button_icon: [32, 36, 42],
-      toolbar_text: [32, 36, 42]
+      ...neonYellowColors,
+      bookmark_text: [84, 245, 255],
+      tab_text: [84, 245, 255],
+      tab_background_text: [84, 245, 255],
+      ntp_text: [84, 245, 255],
+      omnibox_text: [84, 245, 255],
+      tab_background_text_inactive: [65, 170, 178],
+      ntp_link: [84, 245, 255],
+      toolbar_button_icon: [84, 245, 255],
+      toolbar_text: [84, 245, 255]
+    }
+  },
+  {
+    id: "neon-yellow-dark",
+    enabled: true,
+    zipName: "neon-yellow-dark.zip",
+    displayName: "Neon Yellow Dark",
+    description: "A dark graphite Chrome theme with acid neon yellow accents and starship warning-light energy.",
+    version: "1.0.0",
+    assetDir: "neon-yellow-dark",
+    locales: neonYellowLocales,
+    colors: neonYellowColors
+  },
+  
+  // ==================== Light 系列 (浅色主题) ====================
+  {
+    id: "neon-pink-light",
+    enabled: true,
+    zipName: "neon-pink-light.zip",
+    displayName: "Neon Pink Light",
+    description: "A clean white Chrome theme with soft neon pink accents for a bright, modern look.",
+    version: "1.0.0",
+    assetDir: "neon-pink-light",
+    colors: {
+      toolbar: [250, 250, 249],
+      frame: [234, 234, 234],
+      ntp_background: [250, 250, 249],
+      bookmark_text: [255, 148, 184],
+      tab_text: [255, 148, 184],
+      tab_background_text: [255, 148, 184],
+      ntp_text: [34, 40, 49],
+      frame_inactive: [234, 234, 234],
+      background_tab: [234, 234, 234],
+      background_tab_inactive: [234, 234, 234],
+      omnibox_background: [234, 234, 234],
+      omnibox_text: [34, 40, 49],
+      tab_background_text_inactive: [207, 120, 149],
+      ntp_link: [255, 148, 184],
+      toolbar_button_icon: [255, 148, 184],
+      toolbar_text: [34, 40, 49]
+    }
+  },
+  {
+    id: "neon-cyan-light",
+    enabled: true,
+    zipName: "neon-cyan-light.zip",
+    displayName: "Neon Cyan Light",
+    description: "A clean white Chrome theme with refreshing neon cyan accents for a crisp, tech-forward feel.",
+    version: "1.0.0",
+    assetDir: "neon-cyan-light",
+    colors: {
+      toolbar: [250, 250, 249],
+      frame: [234, 234, 234],
+      ntp_background: [250, 250, 249],
+      bookmark_text: [0, 180, 216],
+      tab_text: [0, 180, 216],
+      tab_background_text: [0, 180, 216],
+      ntp_text: [34, 40, 49],
+      frame_inactive: [234, 234, 234],
+      background_tab: [234, 234, 234],
+      background_tab_inactive: [234, 234, 234],
+      omnibox_background: [234, 234, 234],
+      omnibox_text: [34, 40, 49],
+      tab_background_text_inactive: [0, 140, 170],
+      ntp_link: [0, 180, 216],
+      toolbar_button_icon: [0, 180, 216],
+      toolbar_text: [34, 40, 49]
+    }
+  },
+  {
+    id: "neon-yellow-light",
+    enabled: true,
+    zipName: "neon-yellow-light.zip",
+    displayName: "Neon Yellow Light",
+    description: "A clean white Chrome theme with bright neon yellow accents for an energetic, sunny vibe.",
+    version: "1.0.0",
+    assetDir: "neon-yellow-light",
+    colors: {
+      toolbar: [250, 250, 249],
+      frame: [234, 234, 234],
+      ntp_background: [250, 250, 249],
+      bookmark_text: [180, 210, 0],
+      tab_text: [180, 210, 0],
+      tab_background_text: [180, 210, 0],
+      ntp_text: [34, 40, 49],
+      frame_inactive: [234, 234, 234],
+      background_tab: [234, 234, 234],
+      background_tab_inactive: [234, 234, 234],
+      omnibox_background: [234, 234, 234],
+      omnibox_text: [34, 40, 49],
+      tab_background_text_inactive: [140, 165, 0],
+      ntp_link: [180, 210, 0],
+      toolbar_button_icon: [180, 210, 0],
+      toolbar_text: [34, 40, 49]
     }
   }
 ];
