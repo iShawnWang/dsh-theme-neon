@@ -18,7 +18,6 @@ const rootDir = process.cwd();
 const distDir = join(rootDir, "dist");
 const packagesDir = join(distDir, "packages");
 const localeTemplatesDir = join(rootDir, "themes", "locales");
-const sharedAssetsDir = join(rootDir, "themes", "assets", "shared");
 const unreplacedTokenPattern = /\{\{[^}]+\}\}/;
 const manifestBase = {
   name: "__MSG_name__",

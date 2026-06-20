@@ -102,41 +102,14 @@ async function generateThemeImages(themeId, colors) {
 }
 
 /**
- * 智能选择图标颜色
- * 对于深色主题: 使用强调色(通常是 tab_text)
- * 对于浅色主题: 使用深色强调色或主文字颜色
+ * 获取图标颜色
+ * 直接使用强调色 (tab_text) 作为图标颜色。
+ * 各主题的强调色已在 config.js 中针对深浅背景分别配置好合适的色值。
  * @param {Object} colors - 颜色配置对象
  * @returns {number[]} RGB 颜色数组
  */
 function getIconColor(colors) {
-  // 优先使用 tab_text 或 bookmark_text(强调色)
-  const accentColor = colors.tab_text || colors.bookmark_text;
-  
-  if (accentColor) {
-    // 如果强调色是浅色(亮度 > 200),且背景也是浅色,则使用深色
-    const brightness = calculateBrightness(accentColor);
-    const backgroundBrightness = calculateBrightness(colors.toolbar || colors.ntp_background || [255, 255, 255]);
-    
-    // 如果强调色和背景都是浅色,使用深色作为图标
-    if (brightness > 200 && backgroundBrightness > 200) {
-      return colors.tab_background_text || colors.ntp_text || [32, 36, 42];
-    }
-    
-    return accentColor;
-  }
-  
-  // fallback: 使用白色
-  return [255, 255, 255];
-}
-
-/**
- * 计算颜色的亮度 (0-255)
- * @param {number[]} rgb - RGB 颜色数组
- * @returns {number} 亮度值
- */
-function calculateBrightness(rgb) {
-  const [r, g, b] = rgb;
-  return (r * 299 + g * 587 + b * 114) / 1000;
+  return colors.tab_text || colors.bookmark_text || [255, 255, 255];
 }
 
 /**

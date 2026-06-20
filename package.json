@@ -3,11 +3,9 @@
   "private": true,
   "scripts": {
     "zip": "node scripts/build-theme-packages.js",
-    "generate-images": "node scripts/generate-theme-images.js",
-    "typecheck": "tsc --noEmit"
+    "generate-images": "node scripts/generate-theme-images.js"
   },
   "devDependencies": {
-    "sharp": "^0.35.2",
-    "typescript": "^6.0.3"
+    "sharp": "^0.35.2"
   }
 }
