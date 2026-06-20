@@ -1,0 +1,7 @@
+{
+  "name": "chrome-theme-neon",
+  "private": true,
+  "scripts": {
+    "zip": "node scripts/package-theme.js"
+  }
+}

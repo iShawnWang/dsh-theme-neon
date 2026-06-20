@@ -1,0 +1,13 @@
+.DS_Store
+
+# Build and packaging output
+dist/
+*.zip
+
+# Chrome-generated local cache artifacts
+Cached Theme.pak
+
+# Optional editor / OS noise
+Thumbs.db
+
+docs/
