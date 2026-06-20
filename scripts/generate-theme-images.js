@@ -42,14 +42,8 @@ async function generateThemeImages(themeId, colors) {
   console.log(`Output directory: ${assetsDir}\n`);
   
   // 定义需要生成的图片及其对应的颜色
+  // 注意: icon.png 是所有主题共享的，位于 themes/assets/shared/，由构建脚本 fallback 处理
   const images = [
-    {
-      name: "icon.png",
-      description: "主题图标 (128x128)",
-      width: 128,
-      height: 128,
-      color: getIconColor(colors)
-    },
     {
       name: "theme_frame.png",
       description: "窗口框架 (活跃状态)",
@@ -98,18 +92,7 @@ async function generateThemeImages(themeId, colors) {
     console.log(`✓ ${image.name.padEnd(40)} ${colorStr.padEnd(20)} (${image.description})`);
   }
   
-  console.log(`\n✅ Generated ${images.length} images for ${themeId} theme\n`);
-}
-
-/**
- * 获取图标颜色
- * 直接使用强调色 (tab_text) 作为图标颜色。
- * 各主题的强调色已在 config.js 中针对深浅背景分别配置好合适的色值。
- * @param {Object} colors - 颜色配置对象
- * @returns {number[]} RGB 颜色数组
- */
-function getIconColor(colors) {
-  return colors.tab_text || colors.bookmark_text || [255, 255, 255];
+  console.log(`\n✅ Generated ${images.length} images for ${themeId} theme (icon.png uses shared asset)\n`);
 }
 
 /**

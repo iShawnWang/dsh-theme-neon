@@ -18,6 +18,7 @@ const rootDir = process.cwd();
 const distDir = join(rootDir, "dist");
 const packagesDir = join(distDir, "packages");
 const localeTemplatesDir = join(rootDir, "themes", "locales");
+const sharedAssetsDir = join(rootDir, "themes", "assets", "shared");
 const unreplacedTokenPattern = /\{\{[^}]+\}\}/;
 const manifestBase = {
   name: "__MSG_name__",
@@ -152,15 +153,24 @@ function getOutputFileName(theme, imageName) {
 function resolveAssetPath(theme, outputFileName) {
   const themeAssetPath = join(rootDir, "themes", "assets", theme.assetDir, outputFileName);
 
-  if (!existsSync(themeAssetPath)) {
-    throw new Error(
-      `Missing required asset "${outputFileName}" for theme "${theme.id}".\n` +
-      `Expected at: ${themeAssetPath}\n` +
-      `Each theme must have its own complete set of images. Run 'pnpm generate-images --theme ${theme.id}' to generate them.`
-    );
+  if (existsSync(themeAssetPath)) {
+    return themeAssetPath;
   }
 
-  return themeAssetPath;
+  // icon.png falls back to shared asset (one icon for all themes)
+  if (outputFileName === "icon.png") {
+    const sharedPath = join(sharedAssetsDir, outputFileName);
+
+    if (existsSync(sharedPath)) {
+      return sharedPath;
+    }
+  }
+
+  throw new Error(
+    `Missing required asset "${outputFileName}" for theme "${theme.id}".\n` +
+    `Expected at: ${themeAssetPath}\n` +
+    `Each theme must have its own complete set of images. Run 'pnpm generate-images --theme ${theme.id}' to generate them.`
+  );
 }
 
 function copyAssets(theme, stageDir) {
