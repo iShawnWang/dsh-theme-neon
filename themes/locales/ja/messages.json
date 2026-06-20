@@ -1,0 +1,8 @@
+{
+  "name": {
+    "message": "{{displayName}}"
+  },
+  "description": {
+    "message": "{{description}}"
+  }
+}

@@ -10,6 +10,10 @@ declare module "node:fs" {
     path: string,
     options?: { recursive?: boolean }
   ): string | undefined;
+  export function readFileSync(
+    path: string,
+    encoding: string
+  ): string;
   export function readdirSync(
     path: string,
     options: { withFileTypes: true }
@@ -18,6 +22,7 @@ declare module "node:fs" {
     path: string,
     options?: { recursive?: boolean; force?: boolean }
   ): void;
+  export function writeFileSync(path: string, data: string): void;
 }
 
 declare module "node:path" {
@@ -33,5 +38,7 @@ declare module "node:child_process" {
 }
 
 declare const process: {
+  argv: string[];
   cwd(): string;
+  exitCode?: number;
 };

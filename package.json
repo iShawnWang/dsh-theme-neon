@@ -2,6 +2,11 @@
   "name": "chrome-theme-neon",
   "private": true,
   "scripts": {
-    "zip": "node scripts/package-theme.js"
+    "zip": "node scripts/build-theme-packages.js",
+    "generate-images": "node scripts/generate-theme-images.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
   }
 }
