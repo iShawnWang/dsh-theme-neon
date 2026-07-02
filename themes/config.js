@@ -58,36 +58,6 @@ const neonCyanDarkLocales = {
   zh_TW: { description: "一款以冰川霓虹青為點綴的深色主題。" }
 };
 
-const neonPinkLightLocales = {
-  de: { description: "Ein neon-helles Thema mit sanften pinken Akzenten." },
-  es: { description: "Un tema neon claro con acentos rosa suaves." },
-  fr: { description: "Un theme neon clair avec des accents rose doux." },
-  ja: { description: "柔らかなピンクアクセントのネオンライトテーマ。" },
-  ko: { description: "부드러운 핑크 포인트의 네온 라이트 테마." },
-  zh_CN: { description: "一款以柔和霓虹粉为点缀的浅色主题。" },
-  zh_TW: { description: "一款以柔和霓虹粉為點綴的淺色主題。" }
-};
-
-const neonCyanLightLocales = {
-  de: { description: "Ein neon-helles Thema mit klaren cyanfarbenen Akzenten." },
-  es: { description: "Un tema neon claro con acentos cian nitidos." },
-  fr: { description: "Un theme neon clair avec des accents cyan vifs." },
-  ja: { description: "爽やかなシアンアクセントのネオンライトテーマ。" },
-  ko: { description: "산뜻한 시안 포인트의 네온 라이트 테마." },
-  zh_CN: { description: "一款以清爽霓虹青为点缀的浅色主题。" },
-  zh_TW: { description: "一款以清爽霓虹青為點綴的淺色主題。" }
-};
-
-const neonYellowLightLocales = {
-  de: { description: "Ein neon-helles Thema mit leuchtenden gelben Akzenten." },
-  es: { description: "Un tema neon claro con acentos amarillo vividos." },
-  fr: { description: "Un theme neon clair avec des accents jaune vifs." },
-  ja: { description: "鮮やかなイエローアクセントのネオンライトテーマ。" },
-  ko: { description: "선명한 옐로 포인트의 네온 라이트 테마." },
-  zh_CN: { description: "一款以明亮霓虹黄为点缀的浅色主题。" },
-  zh_TW: { description: "一款以明亮霓虹黃為點綴的淺色主題。" }
-};
-
 const themeVariants = [
   // ==================== Dark 系列 (深色主题) ====================
   {
@@ -144,92 +114,6 @@ const themeVariants = [
     assetDir: "neon-yellow-dark",
     locales: neonYellowDarkLocales,
     colors: neonYellowColors
-  },
-  
-  // ==================== Light 系列 (浅色主题) ====================
-  {
-    id: "neon-pink-light",
-    enabled: true,
-    zipName: "neon-pink-light.zip",
-    displayName: "Neon Pink Light",
-    description: "A neon light theme with soft pink accents.",
-    version: "1.0.0",
-    assetDir: "neon-pink-light",
-    locales: neonPinkLightLocales,
-    colors: {
-      toolbar: [250, 250, 249],
-      frame: [234, 234, 234],
-      ntp_background: [250, 250, 249],
-      bookmark_text: [255, 148, 184],
-      tab_text: [255, 148, 184],
-      tab_background_text: [255, 148, 184],
-      ntp_text: [34, 40, 49],
-      frame_inactive: [234, 234, 234],
-      background_tab: [234, 234, 234],
-      background_tab_inactive: [234, 234, 234],
-      omnibox_background: [234, 234, 234],
-      omnibox_text: [34, 40, 49],
-      tab_background_text_inactive: [207, 120, 149],
-      ntp_link: [255, 148, 184],
-      toolbar_button_icon: [255, 148, 184],
-      toolbar_text: [34, 40, 49]
-    }
-  },
-  {
-    id: "neon-cyan-light",
-    enabled: true,
-    zipName: "neon-cyan-light.zip",
-    displayName: "Neon Cyan Light",
-    description: "A neon light theme with crisp cyan accents.",
-    version: "1.0.0",
-    assetDir: "neon-cyan-light",
-    locales: neonCyanLightLocales,
-    colors: {
-      toolbar: [250, 250, 249],
-      frame: [234, 234, 234],
-      ntp_background: [250, 250, 249],
-      bookmark_text: [0, 180, 216],
-      tab_text: [0, 180, 216],
-      tab_background_text: [0, 180, 216],
-      ntp_text: [34, 40, 49],
-      frame_inactive: [234, 234, 234],
-      background_tab: [234, 234, 234],
-      background_tab_inactive: [234, 234, 234],
-      omnibox_background: [234, 234, 234],
-      omnibox_text: [34, 40, 49],
-      tab_background_text_inactive: [0, 140, 170],
-      ntp_link: [0, 180, 216],
-      toolbar_button_icon: [0, 180, 216],
-      toolbar_text: [34, 40, 49]
-    }
-  },
-  {
-    id: "neon-yellow-light",
-    enabled: true,
-    zipName: "neon-yellow-light.zip",
-    displayName: "Neon Yellow Light",
-    description: "A neon light theme with vivid yellow accents.",
-    version: "1.0.0",
-    assetDir: "neon-yellow-light",
-    locales: neonYellowLightLocales,
-    colors: {
-      toolbar: [250, 250, 249],
-      frame: [234, 234, 234],
-      ntp_background: [250, 250, 249],
-      bookmark_text: [180, 210, 0],
-      tab_text: [180, 210, 0],
-      tab_background_text: [180, 210, 0],
-      ntp_text: [34, 40, 49],
-      frame_inactive: [234, 234, 234],
-      background_tab: [234, 234, 234],
-      background_tab_inactive: [234, 234, 234],
-      omnibox_background: [234, 234, 234],
-      omnibox_text: [34, 40, 49],
-      tab_background_text_inactive: [140, 165, 0],
-      ntp_link: [180, 210, 0],
-      toolbar_button_icon: [180, 210, 0],
-      toolbar_text: [34, 40, 49]
-    }
   }
 ];
 
