@@ -5,7 +5,7 @@
   "theme": {
     "neutral": {
       "light": { "lightest": "#FDFBFC", "darkest": "#181417" },
-      "dark": { "lightest": "#F7F3F4", "darkest": "#000000" }
+      "dark": { "lightest": "#F7F3F4", "darkest": "#0A0B0D" }
     },
     "accent": { "light": "#B03A64", "dark": "#FF94B8" },
     "green": { "light": "#1B7A4A", "dark": "#7BE3A8" },

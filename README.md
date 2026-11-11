@@ -13,7 +13,7 @@
 | `neon-pink` | Neon Pink | `#FF94B8` | `#B03A64` | 电气霓虹粉 |
 | `neon-yellow` | Neon Yellow | `#E6FF40` | `#6E7C00` | 酸性荧光黄 |
 
-共同基底：深色外观下 neutral 色阶从 `#F2F5F7` 收到 `#000000`，边框带一点主题色（alpha 7），
+共同基底：深色外观下 neutral 色阶从 `#F2F5F7` 收到 `#0A0B0D`（不是纯黑，取自 taaab 的近黑冷底），边框带一点主题色（alpha 7），
 代码高亮用「强调色 + 另外两色 + 语义绿/琥珀」的三色关系，保持「失落星船驾驶舱」的冷黑底 + 霓虹点缀。
 
 ## 安装 / 更新
@@ -59,7 +59,7 @@ dist/                 # 安装时生成的 zip（git 忽略）
   "name": "Neon Cyan",
   "base": "dsh",              // 缺失字段的回退预设
   "theme": {
-    "neutral": { "light": {...}, "dark": { "lightest": "#F2F5F7", "darkest": "#000000" } },
+    "neutral": { "light": {...}, "dark": { "lightest": "#F2F5F7", "darkest": "#0A0B0D" } },
     "accent": { "light": "...", "dark": "..." },
     "green": { ... }, "amber": { ... }, "red": { ... },
     "border": { "light": { "color": "...", "alpha": 6 }, "dark": { "color": "...", "alpha": 7 } },
