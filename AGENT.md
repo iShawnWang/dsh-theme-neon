@@ -1,96 +1,23 @@
-# Neon Themes 主题说明
+# AGENT.md
 
-## 目的
+这个分支只维护 DSH（DeepSeek Harness）主题，不再包含 Chrome 主题的源码或打包脚本。
 
-这个仓库保存的是一组独立的 Chrome 主题包源码，视觉方向为
-"失落星船马拉松"，目前仅包含深色主题。
+## 真相源
 
-当前实现保持最小化：
+- `themes/*.json`：每套 DSH 自定义主题的种子文档，id 与文件名一致。
+- `scripts/install.mjs`：校验并安装到运行中的 DSH Web GUI，同时导出 `dist/<id>.zip`。
 
-- 只依赖轻量 Node 脚本打包
-- 使用 sharp 库生成纯色 PNG 图片
-- locale 与图片统一走 `themes/` 真相源
-- 不依赖 `midnight-pink-unpacked`
+## 规则
 
-## 主题方向
+- 改配色时只改 `themes/*.json`，不要加壁纸、CSS 或图片资源（保持「只切换」的轻量形态）。
+- 保持每套主题的深色外观：neutral 的 `dark.darkest` 为近黑，`dark.lightest` 为浅色文字；
+  边框 alpha 保持在 6–10 之间，避免硬边。
+- 语义色 `green` / `amber` / `red` 要跟强调色同一色温，别引入第四种主色。
+- 提交前跑 `npm run themes:validate`。
+- 安装用 `npm run themes:install -- --url <DSH Web GUI 地址>`；地址每次会话可能不同。
 
-### Dark 系列（深色主题）
+## 不再包含
 
-视觉方向：
-
-- 基底：深黑、石墨灰、冷调枪灰
-- 强调：荧光黄 / 霓虹粉 / 霓虹青
-- 氛围：废弃星船驾驶舱 / 工业警示系统
-
-避免：
-
-- 糖果黄
-- 偏橙的暖黄
-- 大面积亮白
-- 大面积高饱和纯黄背景
-
-## 当前主题列表
-
-| 主题 ID | 类型 | 强调色 |
-|---------|------|--------|
-| `neon-pink-dark` | Dark | RGB(255, 148, 184) 粉色 |
-| `neon-cyan-dark` | Dark | RGB(84, 245, 255) 青色 |
-| `neon-yellow-dark` | Dark | RGB(230, 255, 64) 荧光黄 |
-
-## 当前结构
-
-根目录不再是可加载的已解压主题包，主题真相源位于 `themes/`，
-可加载产物位于 `dist/packages/<variant>/`。
-
-核心目录：
-
-- `themes/config.js`
-- `themes/assets/<variant>/`
-- `themes/locales/`
-- `scripts/build-theme-packages.js`
-- `scripts/generate-theme-images.js`
-
-## 实现规则
-
-- 保持主题独立，不要重新引入已经删除的旧根目录单主题资源、
-  `_locales` 或下载下来的 CRX 文件。
-- 每个主题必须在自己的 `themes/assets/<variant>/` 目录下拥有完整的 6 张图片，
-  构建脚本不再从 shared 目录 fallback。
-- 优先编辑 `themes/config.js`、`themes/assets/`、`themes/locales/`
-  和 `scripts/` 下的脚本。
-- 不要引入重型构建系统。
-- 第一约束始终是 Chrome 主题兼容性。
-
-## 配色指引
-
-### 深色主题
-
-建议色板范围：
-
-- 荧光黄：`rgb(235, 255, 72)` 到 `rgb(246, 255, 98)`
-- 霓虹粉：`rgb(255, 148, 184)`
-- 霓虹青：`rgb(84, 245, 255)`
-- 弱化非激活色：降低对应强调色的饱和度
-- 深石墨背景：约 `rgb(24, 27, 31)` 到 `rgb(49, 55, 64)`
-- 框架黑：`rgb(0, 0, 0)`
-
-### 常见映射
-
-- `toolbar_button_icon`：强调色
-- `toolbar_text`：强调色
-- `tab_text`：强调色
-- `bookmark_text`：强调色
-- `omnibox_text`：强调色
-- `ntp_text`：强调色
-- 非激活文本：弱化版强调色
-- 工具栏 / 框架 / 背景：黑到石墨灰
-
-## 验证
-
-修改主题时，至少确认：
-
-1. `pnpm generate-images --theme <主题ID>` 能生成图片。
-2. `pnpm zip` 能成功生成目标主题 zip。
-3. `dist/packages/<variant>/` 可以通过 `chrome://extensions` -> `Load unpacked` 正常加载。
-4. 生成的 `manifest.json` 只引用包目录中真实存在的文件。
-5. 工具栏图标、标签文字和地址栏文字符合对应配色。
+- `themes/config.js`、`themes/assets/`、`themes/locales/`
+- `scripts/build-theme-packages.js`、`scripts/generate-theme-images.js`
+- `market/`、`icon*.png`、`raw.png`、`pnpm-lock.yaml`

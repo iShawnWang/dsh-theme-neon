@@ -1,11 +1,9 @@
 {
-  "name": "chrome-theme-neon",
+  "name": "dsh-theme-neon",
   "private": true,
+  "type": "module",
   "scripts": {
-    "zip": "node scripts/build-theme-packages.js",
-    "generate-images": "node scripts/generate-theme-images.js"
-  },
-  "devDependencies": {
-    "sharp": "^0.35.2"
+    "themes:validate": "node scripts/install.mjs --dry-run",
+    "themes:install": "node scripts/install.mjs"
   }
 }

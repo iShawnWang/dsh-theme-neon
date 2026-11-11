@@ -1,14 +1,13 @@
 .DS_Store
 node_modules/
+Thumbs.db
+docs/
 
-# Build and packaging output
+# 安装脚本导出的 DSH 主题 zip
 dist/
 *.zip
 
-# Chrome-generated local cache artifacts
-Cached Theme.pak
-
-# Optional editor / OS noise
-Thumbs.db
-
-docs/
+# 本地记忆/工具目录
+.workbuddy/
+.superpowers/
+.package/

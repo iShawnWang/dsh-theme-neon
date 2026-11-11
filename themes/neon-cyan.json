@@ -1,0 +1,30 @@
+{
+  "id": "neon-cyan",
+  "name": "Neon Cyan",
+  "base": "dsh",
+  "theme": {
+    "neutral": {
+      "light": { "lightest": "#FBFCFD", "darkest": "#14181C" },
+      "dark": { "lightest": "#F2F5F7", "darkest": "#000000" }
+    },
+    "accent": { "light": "#007A87", "dark": "#54F5FF" },
+    "green": { "light": "#0E7A4E", "dark": "#63E6BE" },
+    "amber": { "light": "#8A5A00", "dark": "#FFC861" },
+    "red": { "light": "#C42A4A", "dark": "#FF6B8A" },
+    "border": {
+      "light": { "color": "#0B1A1E", "alpha": 6 },
+      "dark": { "color": "#54F5FF", "alpha": 7 }
+    },
+    "shiki": {
+      "constant": { "light": "#006D7A", "dark": "#54F5FF" },
+      "string": { "light": "#0E7A4E", "dark": "#63E6BE" },
+      "comment": { "light": "#6B7780", "dark": "#5F6B7A" },
+      "keyword": { "light": "#B03A64", "dark": "#FF94B8" },
+      "parameter": { "light": "#8A5A00", "dark": "#FFC861" },
+      "function": { "light": "#6E7C00", "dark": "#E6FF40" },
+      "string-expression": { "light": "#1B7A4A", "dark": "#7BE3A8" },
+      "punctuation": { "light": "#3F5157", "dark": "#C3D6DD" },
+      "link": { "light": "#006D7A", "dark": "#54F5FF" }
+    }
+  }
+}
