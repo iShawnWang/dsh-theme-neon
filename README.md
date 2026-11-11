@@ -8,9 +8,7 @@ Three neon palettes for **DeepSeek Harness (DSH)** — cyan, pink and yellow, on
 
 只做配色：neutral 色阶 + 强调色 + 语义色 + 边框 + 代码高亮。
 
-| English | 中文 |
-| --- | --- |
-| ![English settings](assets/screenshots/neon-cyan-dark-en.png) | ![中文设置](assets/screenshots/neon-cyan-dark.png) |
+![English settings](assets/screenshots/neon-cyan-dark-en.png)
 
 ## 三套配色
 

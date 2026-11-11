@@ -13,6 +13,7 @@
 
 - 改配色时只改 `themes/*.json`，然后跑 `npm run build`；不要手改 `lib/client.js`。
 - 不加壁纸、主题图片、导入导出或主题面板——形态就是「外观」旁边的一行、三个色块；`assets/` 只放市场用的图标和截图，插件运行时不加载。
+- 市场截图只用英文界面（DSH 语言切到 English 再截），文件名以 `-en.png` 结尾；不再保留中文截图。
 - 深色外观的 `neutral.dark.darkest` 保持 `#0A0B0D`（近黑冷底，别改回纯黑）；边框 alpha 保持 6–10。
 - 语义色 `green` / `amber` / `red` 要跟强调色同一色温，别引入第四种主色。
 - 提交前跑 `npm run check` 和 `node --check lib/client.js`。
