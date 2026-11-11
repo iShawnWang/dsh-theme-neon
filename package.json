@@ -1,9 +1,31 @@
 {
   "name": "dsh-theme-neon",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
+  "description": "Three neon palettes for DeepSeek Harness, as one row in General settings.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "themes",
+    "cordis.patch.yml"
+  ],
   "scripts": {
-    "themes:validate": "node scripts/install.mjs --dry-run",
-    "themes:install": "node scripts/install.mjs"
+    "build": "node scripts/build-client.mjs",
+    "check": "node scripts/build-client.mjs --check"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
   }
 }

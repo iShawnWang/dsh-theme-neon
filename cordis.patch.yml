@@ -1,0 +1,7 @@
+# dsh-theme-neon profile patch layer — mount the plugin.
+#
+# The host half is a no-op: this plugin only ships a browser half, which
+# dsh-client-modules picks up from the package's `dsh.client` declaration.
+- insert:
+    - id: dsh-theme-neon
+      name: dsh-theme-neon
