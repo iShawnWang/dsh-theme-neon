@@ -8,6 +8,8 @@ Three neon palettes for **DeepSeek Harness (DSH)** — cyan, pink and yellow, on
 
 只做配色：neutral 色阶 + 强调色 + 语义色 + 边框 + 代码高亮。
 
+![Neon Cyan in DSH settings](assets/screenshots/neon-cyan-dark.png)
+
 ## 三套配色
 
 | ID | 名称 | 强调色（深色） | 浅色强调 | 说明 |
@@ -45,6 +47,12 @@ npm run check        # 校验 lib/client.js 是否与 themes/*.json 同步
 pnpm install --dir ~/.dsh/profiles/desktop
 ```
 
+或者让 DSH 直接从 GitHub 安装这个插件：
+
+```sh
+dsh plugin add github:iShawnWang/dsh-theme-neon
+```
+
 刷新 DSH 窗口（必要时重启）。打开 `设置 → 通用设置`，在「外观」下面看到「主题配色」：
 Neon Cyan / Neon Pink / Neon Yellow 三个色块，点一下即切换；「外观」仍然控制深色/浅色。
 
@@ -59,6 +67,9 @@ lib/index.js             host 半（空实现，只为满足 profile bundle 结�
 lib/client.template.js   客户端插件源码（含占位符）
 lib/client.js            生成物，提交进仓库，DSH 直接加载
 cordis.patch.yml         profile patch，把插件挂进 bundle 列表
+assets/icon-180.png      市场卡片图标
+assets/screenshots/      设置页截图（深色三套 + 浅色一套）
+screenshots.json         市场截图清单，路径相对仓库根
 ```
 
 原始 Chrome 主题（Chrome 商店版本）在 [iShawnWang/chrome-theme-neon](https://github.com/iShawnWang/chrome-theme-neon)。
