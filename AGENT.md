@@ -19,6 +19,7 @@
 - 语义色 `green` / `amber` / `red` 要跟强调色同一色温，别引入第四种主色。
 - 提交前跑 `npm run check` 和 `node --check lib/client.js`。
 - 插件只改 token，不拦截 DSH 的「外观」开关：浅色/深色由 shell 的 `data-ds-dark-theme` 决定。
+- 表面染色只加在 `SURFACE_TINTS` 的 surface token 上（sidebar/nav/input/bubble/card/hover），不要染 label/text token；强度保持 5–14%。
 
 ## 不再包含
 

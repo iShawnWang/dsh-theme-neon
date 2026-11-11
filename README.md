@@ -27,6 +27,7 @@ Light appearance has its own near-white base and coexists with DSH's built-in **
 
 - `themes/*.json` is the single source of truth: each palette stores only seeds (neutral endpoints, accent/green/amber/red, border, shiki).
 - `scripts/build-client.mjs` expands the seeds into CSS variables with the same algorithm as the DSH presets and inlines them into `lib/client.js`.
+- Surface tokens get a 5–14% wash of the accent (`SURFACE_TINTS`: sidebar, selected rows, input, bubble, settings card, hover); text and ramps stay neutral.
 - The client plugin registers a row in the `settings.general.item` slot (order `10.5`, right after Appearance). Selecting a palette adds `data-neon-palette="<id>"` to `<html>`, and the static stylesheet switches between light and dark based on `data-ds-dark-theme`.
 - The selection is stored under `dsh-neon-palette` in `localStorage` and survives a refresh; with no selection, everything returns to the DSH defaults.
 
