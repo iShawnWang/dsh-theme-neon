@@ -1,6 +1,6 @@
 # AGENT.md
 
-这个仓库只维护一个 DSH（DeepSeek Harness）插件，不包含 Chrome 主题的源码或打包脚本，也不依赖 `dsh-cool-theme`。
+这个仓库只维护一个 DSH（DeepSeek Harness）插件，不包含 Chrome 主题的源码或打包脚本。
 
 ## 真相源
 
@@ -23,4 +23,3 @@
 - `themes/config.js`、`themes/assets/`、`themes/locales/`
 - `scripts/build-theme-packages.js`、`scripts/generate-theme-images.js`
 - `market/`、`icon*.png`、`raw.png`、`pnpm-lock.yaml`
-- 针对 `dsh-cool-theme` 的安装脚本（`scripts/install.mjs`）和 `<id>.zip`

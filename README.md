@@ -4,7 +4,7 @@ Three neon palettes for **DeepSeek Harness (DSH)** — cyan, pink and yellow, on
 
 这是一个 **DeepSeek Harness (DSH) 小插件**：
 在 `设置 → 通用设置` 的「外观」下面加一行「主题配色」，三个色块直接切换，
-不再依赖 `dsh-cool-theme`，也没有主题面板、导入导出或壁纸。
+没有主题面板、导入导出或壁纸。
 
 只做配色：neutral 色阶 + 强调色 + 语义色 + 边框 + 代码高亮。
 
