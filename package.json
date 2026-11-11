@@ -27,5 +27,17 @@
       "inject": [],
       "platform": "web"
     }
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iShawnWang/dsh-theme-neon.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "neon"
+  ]
 }

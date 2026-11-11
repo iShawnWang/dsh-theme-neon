@@ -1,6 +1,6 @@
 # AGENT.md
 
-这个分支只维护一个 DSH（DeepSeek Harness）插件，不再包含 Chrome 主题的源码或打包脚本，也不依赖 `dsh-cool-theme`。
+这个仓库只维护一个 DSH（DeepSeek Harness）插件，不包含 Chrome 主题的源码或打包脚本，也不依赖 `dsh-cool-theme`。
 
 ## 真相源
 

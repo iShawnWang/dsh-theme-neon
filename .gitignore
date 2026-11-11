@@ -1,13 +1,8 @@
 .DS_Store
-node_modules/
 Thumbs.db
-docs/
+node_modules/
 
-# 安装脚本导出的 DSH 主题 zip
-dist/
-*.zip
-
-# 本地记忆/工具目录
+# 本地记忆 / 工具目录
 .workbuddy/
 .superpowers/
 .package/

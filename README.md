@@ -1,6 +1,8 @@
 # Neon DSH Themes
 
-仓库原来的三个深色 Chrome 主题（青 / 粉 / 黄），现在是 **DeepSeek Harness (DSH) 的一个小插件**：
+Three neon palettes for **DeepSeek Harness (DSH)** — cyan, pink and yellow, one row in settings.
+
+这是一个 **DeepSeek Harness (DSH) 小插件**：
 在 `设置 → 通用设置` 的「外观」下面加一行「主题配色」，三个色块直接切换，
 不再依赖 `dsh-cool-theme`，也没有主题面板、导入导出或壁纸。
 
@@ -25,26 +27,28 @@
   选中后给 `<html>` 加 `data-neon-palette="<id>"`，静态样式表按 `data-ds-dark-theme` 自动分浅色/深色。
 - 选择存在 `localStorage` 的 `dsh-neon-palette` 里，刷新后仍在；不选则完全回到 DSH 默认。
 
-## 本地安装 / 开发
+## 安装 / 开发
 
 ```sh
+git clone git@github.com:iShawnWang/dsh-theme-neon.git
+cd dsh-theme-neon
 npm run build        # 由 themes/*.json 生成 lib/client.js
 npm run check        # 校验 lib/client.js 是否与 themes/*.json 同步
 ```
 
-把本仓库作为 `file:` 依赖挂进 DSH profile：
+把仓库作为 `file:` 依赖挂进 DSH profile：
 
 ```sh
 # ~/.dsh/profiles/desktop/package.json
-#   dependencies: { "dsh-theme-neon": "file:/path/to/chrome-theme-neon" }
+#   dependencies: { "dsh-theme-neon": "file:/path/to/dsh-theme-neon" }
 #   dsh.profile.bundles: [ ..., "dsh-theme-neon" ]
 pnpm install --dir ~/.dsh/profiles/desktop
 ```
 
-然后重启 DSH。打开 `设置 → 通用设置`，在「外观」下面看到「主题配色」：
+刷新 DSH 窗口（必要时重启）。打开 `设置 → 通用设置`，在「外观」下面看到「主题配色」：
 Neon Cyan / Neon Pink / Neon Yellow 三个色块，点一下即切换；「外观」仍然控制深色/浅色。
 
-改配色时只改 `themes/*.json` 再 `npm run build`；需要让 DSH 重新加载插件才生效。
+改配色时只改 `themes/*.json` 再 `npm run build`；DSH 重新加载插件后生效。
 
 ## 目录
 
@@ -57,4 +61,8 @@ lib/client.js            生成物，提交进仓库，DSH 直接加载
 cordis.patch.yml         profile patch，把插件挂进 bundle 列表
 ```
 
-Chrome 主题版本仍在 `main` 分支；这个分支只保留 DSH 插件。
+原始 Chrome 主题（Chrome 商店版本）在 [iShawnWang/chrome-theme-neon](https://github.com/iShawnWang/chrome-theme-neon)。
+
+## License
+
+[MIT](LICENSE) © 2026 Shawn Wang
