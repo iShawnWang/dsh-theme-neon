@@ -1,30 +1,81 @@
 {
-  "id": "neon-yellow",
-  "name": "Neon Yellow",
-  "base": "dsh",
-  "theme": {
-    "neutral": {
-      "light": { "lightest": "#FDFDF7", "darkest": "#171A0E" },
-      "dark": { "lightest": "#F6F7EE", "darkest": "#0A0B0D" }
-    },
-    "accent": { "light": "#6E7C00", "dark": "#E6FF40" },
-    "green": { "light": "#3F7A1A", "dark": "#9BE36B" },
-    "amber": { "light": "#8A5A00", "dark": "#FFD166" },
-    "red": { "light": "#C42A4A", "dark": "#FF5C7A" },
-    "border": {
-      "light": { "color": "#161A0B", "alpha": 6 },
-      "dark": { "color": "#E6FF40", "alpha": 7 }
-    },
-    "shiki": {
-      "constant": { "light": "#6E7C00", "dark": "#E6FF40" },
-      "string": { "light": "#2E7D32", "dark": "#9BE36B" },
-      "comment": { "light": "#6B7780", "dark": "#5F6B7A" },
-      "keyword": { "light": "#B03A64", "dark": "#FF94B8" },
-      "parameter": { "light": "#8A5A00", "dark": "#FFC861" },
-      "function": { "light": "#006D7A", "dark": "#54F5FF" },
-      "string-expression": { "light": "#3F7A1A", "dark": "#C7F464" },
-      "punctuation": { "light": "#4A555C", "dark": "#C8D2DC" },
-      "link": { "light": "#006D7A", "dark": "#54F5FF" }
-    }
-  }
+	"id": "neon-yellow",
+	"name": "Neon Yellow",
+	"base": "dsh",
+	"theme": {
+		"neutral": {
+			"light": {
+				"lightest": "#FDFDFD",
+				"darkest": "#171717"
+			},
+			"dark": {
+				"lightest": "#F7F7F7",
+				"darkest": "#0A0B0D"
+			}
+		},
+		"accent": {
+			"light": "#6E7C00",
+			"dark": "#E6FF40"
+		},
+		"green": {
+			"light": "#3F7A1A",
+			"dark": "#9BE36B"
+		},
+		"amber": {
+			"light": "#8A5A00",
+			"dark": "#FFD166"
+		},
+		"red": {
+			"light": "#C42A4A",
+			"dark": "#FF5C7A"
+		},
+		"border": {
+			"light": {
+				"color": "#161A0B",
+				"alpha": 6
+			},
+			"dark": {
+				"color": "#E6FF40",
+				"alpha": 7
+			}
+		},
+		"shiki": {
+			"constant": {
+				"light": "#6E7C00",
+				"dark": "#E6FF40"
+			},
+			"string": {
+				"light": "#2E7D32",
+				"dark": "#9BE36B"
+			},
+			"comment": {
+				"light": "#6B7780",
+				"dark": "#5F6B7A"
+			},
+			"keyword": {
+				"light": "#B03A64",
+				"dark": "#FF94B8"
+			},
+			"parameter": {
+				"light": "#8A5A00",
+				"dark": "#FFC861"
+			},
+			"function": {
+				"light": "#006D7A",
+				"dark": "#54F5FF"
+			},
+			"string-expression": {
+				"light": "#3F7A1A",
+				"dark": "#C7F464"
+			},
+			"punctuation": {
+				"light": "#4A555C",
+				"dark": "#C8D2DC"
+			},
+			"link": {
+				"light": "#006D7A",
+				"dark": "#54F5FF"
+			}
+		}
+	}
 }

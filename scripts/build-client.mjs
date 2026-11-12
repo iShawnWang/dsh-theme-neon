@@ -128,63 +128,19 @@ function borderTokens(mode, seed) {
 }
 
 /**
- * Large interactive surfaces get a light wash of the accent, on top of the
- * neutral step DSH would use. Text and ramps stay neutral, so contrast is
- * unchanged; only the panels visibly carry the palette.
+ * Surface fills stay neutral. The palette only reaches the UI through borders,
+ * the selected-row indicator and the semantic tokens, so the shell keeps its
+ * calm grey canvas.
  */
-const SURFACE_TINTS = {
-	light: [
-		["--dsw-specific-sidebar-fill", 50, 6],
-		["--dsw-specific-sidebar-nav-item-active", 100, 10],
-		["--dsw-specific-sidebar-nav-item-active-accent", 100, 14],
-		["--dsw-alias-bg-module-platform", 60, 8],
-		["--dsw-alias-settings-card-fill", 0, 2],
-		["--dsw-specific-input-major", 0, 2],
-		["--dsw-specific-bubble", 50, 8],
-		["--dsw-specific-tip", 60, 6],
-		["--dsw-specific-selector", 60, 6],
-		["--dsw-alias-markdown-code-block", 50, 2],
-		["--dsw-alias-markdown-code-block-banner", 50, 3]
-	],
-	dark: [
-		["--dsw-specific-sidebar-fill", 900, 6],
-		["--dsw-specific-sidebar-nav-item-active", 750, 10],
-		["--dsw-specific-sidebar-nav-item-active-accent", 800, 14],
-		["--dsw-alias-bg-module-platform", 800, 10],
-		["--dsw-alias-settings-card-fill", 850, 5],
-		["--dsw-specific-input-major", 850, 5],
-		["--dsw-specific-bubble", 850, 7],
-		["--dsw-specific-tip", 800, 8],
-		["--dsw-specific-selector", 800, 8],
-		["--dsw-alias-markdown-code-block", 900, 4],
-		["--dsw-alias-markdown-code-block-banner", 850, 4]
-	]
-};
-
-function neutralToken(step) {
-	return step === 0 ? "--dsw-static-neutral-bluish-00" : `--dsw-static-neutral-bluish-${step}`;
-}
-
-function surfaceTokens(mode) {
-	const map = {};
-	for (const [token, step, percent] of SURFACE_TINTS[mode]) {
-		map[token] = `color-mix(in srgb, var(--dsw-static-deepseek-500) ${percent}%, var(${neutralToken(step)}))`;
-	}
-	const hover = mode === "dark" ? 10 : 6;
-	const active = mode === "dark" ? 14 : 10;
-	map["--dsw-alias-interactive-bg-hover"] = `color-mix(in srgb, var(--dsw-static-deepseek-500) ${hover}%, transparent)`;
-	map["--dsw-alias-interactive-bg-active"] = `color-mix(in srgb, var(--dsw-static-deepseek-500) ${active}%, transparent)`;
-	return map;
-}
-
 function appearanceTokens(seeds, mode) {
 	const map = {
 		...buildScale("--dsw-static-neutral-bluish", seeds.neutral[mode].lightest, seeds.neutral[mode].darkest, BLUISH_STEPS),
 		...buildScale("--dsw-static-neutral", seeds.neutral[mode].lightest, seeds.neutral[mode].darkest, NEUTRAL_STEPS),
 		...semanticScales(seeds, mode),
-		...borderTokens(mode, seeds.border[mode]),
-		...surfaceTokens(mode)
+		...borderTokens(mode, seeds.border[mode])
 	};
+	map["--dsw-specific-sidebar-nav-item-active-accent"] = "var(--dsw-static-deepseek-500)";
+	map["--dsw-specific-sidebar-fill"] = mode === "dark" ? "var(--dsw-static-neutral-bluish-950)" : "var(--dsw-static-neutral-bluish-00)";
 	for (const key of SHIKI_KEYS) map[`--shiki-token-${key}`] = seeds.shiki[key][mode];
 	return map;
 }
