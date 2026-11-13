@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Three neon palettes for DeepSeek Harness, as one row in General settings.",
+  "description": "Three neon themes for DeepSeek Harness: cyan, pink, yellow.",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
