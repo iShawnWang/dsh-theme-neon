@@ -2,6 +2,8 @@
 
 [English](README.md) · **简体中文**
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 给 **DeepSeek Harness (DSH)** 的三套霓虹配色——青、粉、黄，在设置里只占一行。
 
 这是一个 **DeepSeek Harness (DSH) 小插件**：

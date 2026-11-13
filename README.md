@@ -2,6 +2,8 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 Three neon palettes for **DeepSeek Harness (DSH)** — cyan, pink and yellow — in one row in settings.
 
 This is a small **DeepSeek Harness (DSH)** plugin:
